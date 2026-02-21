@@ -30,7 +30,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/tree-sitter/tree-sitter.git",
-                    "tag": "v0.22.5"
+                    "tag": "v0.26.5"
                 }
             ],
             "cleanup": [
@@ -66,7 +66,7 @@
                 {
                     "type": "git",
                     "url": "https://gcc.gnu.org/git/gcc.git",
-                    "tag": "releases/gcc-13.2.0"
+                    "tag": "releases/gcc-15.2.0"
                 }
             ],
             "cleanup": [
@@ -151,38 +151,18 @@
             "config-opts": [
                 "--with-gnutls",
                 "--with-tree-sitter",
-                "--with-native-compilation"
+                "--with-native-compilation",
                 "--with-pgtk"
             ],
             "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/emacs/emacs-30.1.tar.xz",
-                    "sha256": "6ccac1ae76e6af93c6de1df175e8eb406767c23da3dd2a16aa67e3124a6f138f"
-                },
+		{
+			"type": "git",
+			"url": "https://git.savannah.gnu.org/git/emacs.git",
+			"branch": "master"
+	    	},
                 {
                     "type": "patch",
                     "path": "emacs.desktop-exec-wrapper.patch"
-                },
-                {
-                    "type": "patch",
-                    "path": "metainfo-releases.patch"
-                },
-                {
-                    "type": "patch",
-                    "path": "metainfo-launchable.patch"
-                },
-                {
-                    "type": "patch",
-                    "path": "metainfo-content-rating.patch"
-                },
-                {
-                    "type": "patch",
-                    "path": "metainfo-screenshot-size.patch"
-                },
-                {
-                    "type": "patch",
-                    "path": "metainfo-caption-point.patch"
                 }
             ],
             "cleanup": [
