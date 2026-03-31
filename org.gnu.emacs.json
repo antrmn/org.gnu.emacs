@@ -29,7 +29,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/tree-sitter/tree-sitter.git",
-                    "tag": "v0.25.10"
+                    "tag": "v0.25.10",
+                    "commit": "da6fe9beb4f7f67beb75914ca8e0d48ae48d6406"
                 }
             ],
             "cleanup": [
