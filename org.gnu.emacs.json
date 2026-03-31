@@ -76,6 +76,10 @@
                 {
                     "type": "patch",
                     "path": "metainfo-caption-point.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "metainfo-vcs-browser.patch"
                 }
             ],
             "cleanup": [
