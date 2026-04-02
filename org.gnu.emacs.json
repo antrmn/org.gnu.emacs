@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnu.emacs",
     "runtime": "org.freedesktop.Sdk",
-    "runtime-version": "24.08",
+    "runtime-version": "25.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "emacs-wrapper",
     "rename-icon": "emacs",
@@ -19,6 +19,7 @@
         "--talk-name=org.freedesktop.Flatpak"
     ],
     "modules": [
+        "libgccjit.json",
         {
             "name": "tree-sitter",
             "buildsystem": "simple",
@@ -30,7 +31,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/tree-sitter/tree-sitter.git",
-                    "tag": "v0.26.5"
+                    "tag": "v0.25.10",
+                    "commit": "da6fe9beb4f7f67beb75914ca8e0d48ae48d6406"
                 }
             ],
             "cleanup": [
@@ -151,18 +153,42 @@
             "config-opts": [
                 "--with-gnutls",
                 "--with-tree-sitter",
-                "--with-native-compilation",
-                "--with-pgtk"
+                "--with-pgtk",
+                "--with-native-compilation"
             ],
             "sources": [
-		{
-			"type": "git",
-			"url": "https://git.savannah.gnu.org/git/emacs.git",
-			"branch": "master"
-	    	},
+                {
+                    "type": "archive",
+                    "url": "https://ftp.gnu.org/gnu/emacs/emacs-30.2.tar.xz",
+                    "sha256": "b3f36f18a6dd2715713370166257de2fae01f9d38cfe878ced9b1e6ded5befd9"
+                },
                 {
                     "type": "patch",
                     "path": "emacs.desktop-exec-wrapper.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "metainfo-releases.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "metainfo-launchable.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "metainfo-content-rating.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "metainfo-screenshot-size.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "metainfo-caption-point.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "metainfo-vcs-browser.patch"
                 }
             ],
             "cleanup": [
@@ -179,8 +205,8 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://github.com/flathub/ide-flatpak-wrapper.git",
-                    "commit": "e42aba9acceceb234216e60bb690705992517907"
+                    "url": "https://github.com/flathub-infra/ide-flatpak-wrapper.git",
+                    "commit": "2881abaf9efc6e14923b8a0bb085275aaf2fbddf"
                 },
                 {
                     "type": "file",
