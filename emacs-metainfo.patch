@@ -1,0 +1,42 @@
+--- a/etc/emacs.metainfo.xml	2026-04-02 22:02:31.601767213 +0200
++++ b/etc/emacs.metainfo.xml	2026-04-02 22:07:07.951942477 +0200
+@@ -35,7 +35,7 @@
+  <url type="contact">https://lists.gnu.org/mailman/listinfo/emacs-devel/</url>
+  <url type="vcs-browser">https://git.savannah.gnu.org/cgit/emacs.git</url>
+  <url type="contribute">https://www.gnu.org/software/emacs/manual/html_node/emacs/Contributing.html</url>
+- <launchable type="desktop-id">emacs.desktop</launchable>
++ <launchable type="desktop-id">org.gnu.emacs.desktop</launchable>
+  <launchable type="service">emacs.service</launchable>
+  <recommends>
+    <control>keyboard</control>
+@@ -56,7 +56,7 @@
+  <screenshots>
+   <screenshot type="default">
+     <image type="source" width="1024" height="576">https://www.gnu.org/software/emacs/images/appdata-26.png</image>
+-    <caption>Editing a Lisp program, whilst viewing the manual</caption>
++    <caption>Editing a Lisp program, whilst viewing the manual.</caption>
+   </screenshot>
+  </screenshots>
+ 
+@@ -82,6 +82,21 @@
+  </content_rating>
+ 
+  <update_contact>emacs-devel_AT_gnu.org</update_contact>
++ <releases>
++  <release date="2025-08-14" version="30.2"/>
++  <release date="2025-02-23" version="30.1"/>
++  <release date="2024-06-24" version="29.4"/>
++  <release date="2024-03-24" version="29.3"/>
++  <release date="2024-01-18" version="29.2"/>
++  <release date="2023-07-30" version="29.1"/>
++  <release date="2022-09-12" version="28.2"/>
++  <release date="2022-04-04" version="28.1"/>
++  <release date="2021-03-25" version="27.2"/>
++  <release date="2020-08-11" version="27.1"/>
++  <release date="2019-08-28" version="26.3"/>
++  <release date="2019-04-12" version="26.2"/>
++  <release date="2018-05-28" version="26.1"/>
++ </releases>
+  <branding>
+     <color type="primary" scheme_preference="light">#7f5ab6</color>
+     <color type="primary" scheme_preference="dark">#624195</color>
