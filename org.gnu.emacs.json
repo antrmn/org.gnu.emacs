@@ -3,7 +3,7 @@
     "runtime": "org.freedesktop.Sdk",
     "runtime-version": "25.08",
     "sdk": "org.freedesktop.Sdk",
-    "command": "emacs-wrapper",
+    "command": "emacs",
     "rename-icon": "emacs",
     "rename-appdata-file": "emacs.metainfo.xml",
     "rename-desktop-file": "emacs.desktop",
@@ -58,10 +58,6 @@
                 },
                 {
                     "type": "patch",
-                    "path": "emacs.desktop-exec-wrapper.patch"
-                },
-                {
-                    "type": "patch",
                     "path": "emacs-metainfo.patch"
                 }
             ],
@@ -71,28 +67,6 @@
                 "/share/icons/hicolor/scalable/apps/emacs.ico",
                 "/share/icons/hicolor/scalable/mimetypes/emacs-document.svg",
                 "/share/icons/hicolor/scalable/mimetypes/emacs-document23.svg"
-            ]
-        },
-        {
-            "name": "wrapper",
-            "buildsystem": "meson",
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/flathub-infra/ide-flatpak-wrapper.git",
-                    "commit": "2881abaf9efc6e14923b8a0bb085275aaf2fbddf"
-                },
-                {
-                    "type": "file",
-                    "path": "emacs-first-run.txt"
-                }
-            ],
-            "config-opts": [
-                "-Deditor_binary=/app/bin/emacs",
-                "-Dprogram_name=emacs-wrapper",
-                "-Deditor_title=GNU Emacs",
-                "-Dflagfile_prefix=flatpak-emacs",
-                "-Dfirst_run_template=emacs-first-run.txt"
             ]
         }
     ]
