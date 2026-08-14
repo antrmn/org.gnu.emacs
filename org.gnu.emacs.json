@@ -7,6 +7,13 @@
     "rename-icon": "emacs",
     "rename-appdata-file": "emacs.metainfo.xml",
     "rename-desktop-file": "emacs.desktop",
+    "build-options" : {
+        "env" : {
+            "V" : "1",
+            "BASH_COMPLETIONSDIR" : "/app/share/bash-completion/completions",
+            "MOUNT_FUSE_PATH" : "../tmp/"
+        }
+    },
     "finish-args": [
         "--share=network",
         "--share=ipc",
@@ -16,9 +23,16 @@
         "--filesystem=host",
         "--filesystem=/tmp",
         "--filesystem=/var/tmp",
-        "--talk-name=org.freedesktop.Flatpak"
+        "--filesystem=~/.local/share/flatpak",
+        "--filesystem=/var/lib/flatpak",
+        "--talk-name=org.freedesktop.Flatpak",
+        "--allow=devel",
+        "--device=dri",
+        "--system-talk-name=org.freedesktop.PolicyKit1",
+        "--system-talk-name=org.freedesktop.Flatpak.SystemHelper"
     ],
     "modules": [
+        "./foundry/libfoundry.json",
         "libgccjit.json",
         {
             "name": "tree-sitter",
